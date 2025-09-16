@@ -48,7 +48,7 @@ const Benefits = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
-            const glowClass = benefit.color === 'primary' ? 'glow-blue' : 'glow-violet';
+            const isPrimary = benefit.color === 'primary';
             
             return (
               <Card 
@@ -56,8 +56,12 @@ const Benefits = () => {
                 className="bg-card/30 backdrop-blur border-border/30 hover:border-border/60 transition-all duration-300 group hover:scale-105"
               >
                 <CardContent className="p-6 text-center">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-${benefit.color}/10 flex items-center justify-center ${glowClass} group-hover:${glowClass}`}>
-                    <Icon className={`w-8 h-8 text-${benefit.color}`} />
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    isPrimary 
+                      ? 'bg-primary/10 glow-blue group-hover:glow-blue' 
+                      : 'bg-secondary/10 glow-violet group-hover:glow-violet'
+                  }`}>
+                    <Icon className={`w-8 h-8 ${isPrimary ? 'text-primary' : 'text-secondary'}`} />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">
