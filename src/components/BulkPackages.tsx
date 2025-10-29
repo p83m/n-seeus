@@ -10,9 +10,8 @@ const BulkPackages = () => {
       features: [
         "Pełna personalizacja",
         "Twoje logo w dowolnym kolorze",
-        "Kształt do wyboru",
         "Programowanie NFC",
-        "Pakowanie w eleganckie pudełko"
+        "Bazowa wizytówka",
       ]
     },
     {
@@ -20,10 +19,8 @@ const BulkPackages = () => {
       popular: false,
       features: [
         "Wszystko z pakietu 100 szt.",
-        "Zniżka za ilość",
-        "Dodatkowy projekt graficzny",
-        "Express realizacja",
-        "Dedykowany opiekun"
+        "Zniżka ilościowa",
+        "Rozszerzona personalizacja wizytówki"
       ]
     },
     {
@@ -31,10 +28,8 @@ const BulkPackages = () => {
       popular: true,
       features: [
         "Wszystko z pakietu 200 szt.",
-        "Najlepsza cena za sztukę",
-        "Możliwość 2 projektów",
-        "Priorytetowa obsługa",
-        "Darmowa próbka przed produkcją"
+        "Możliwe dwa różne projekty",
+        "Projekt graficzny, jeśli nie posiadasz logo",
       ]
     },
     {
@@ -43,9 +38,7 @@ const BulkPackages = () => {
       features: [
         "Wszystko z pakietu 300 szt.",
         "Kolejna zniżka",
-        "3 różne projekty",
         "Dodatkowe opcje kształtu",
-        "Gwarancja satysfakcji"
       ]
     },
     {
@@ -54,9 +47,7 @@ const BulkPackages = () => {
       features: [
         "Wszystko z pakietu 400 szt.",
         "Najniższa cena",
-        "Nieograniczone projekty",
-        "Premium opakowanie",
-        "Rozszerzona gwarancja 2 lata"
+        "Możliwość trzech projektów",
       ]
     }
   ];
@@ -66,10 +57,13 @@ const BulkPackages = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Pakiety <span className="gradient-primary bg-clip-text text-transparent">hurtowe</span>
+            Pakiety{" "}
+            <span className="bg-gradient-to-r from-sky-400 to-violet-500 bg-clip-text text-transparent inline-block">
+              hurtowe
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Wybierz odpowiednią ilość dla Twojego biznesu. Im więcej zamówisz, tym niższa cena za sztukę.
+            Wybierz odpowiednią ilość dla Twojego biznesu.
           </p>
         </div>
 

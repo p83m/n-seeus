@@ -46,10 +46,13 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Skontaktuj się z <span className="gradient-primary bg-clip-text text-transparent">nami</span>
+            Skontaktuj się z{" "}
+            <span className="bg-gradient-to-r from-sky-400 to-violet-500 bg-clip-text text-transparent inline-block">
+              nami
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Gotowy na rozpoczęcie? Napisz do nas, a otrzymasz spersonalizowaną wycenę w ciągu 24 godzin.
+            Gotowy na rozpoczęcie współpracy? Napisz do nas, a otrzymasz spersonalizowaną wycenę w ciągu 24 godzin.
           </p>
         </div>
 
@@ -78,7 +81,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Telefon</h3>
-                    <p className="text-muted-foreground">+48 123 456 789</p>
+                    <p className="text-muted-foreground">+48 451 063 065</p>
                   </div>
                 </div>
               </CardContent>
@@ -91,8 +94,8 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Biuro</h3>
-                    <p className="text-muted-foreground">Warszawa, Polska</p>
+                    <h3 className="font-semibold">Lokalizacja</h3>
+                    <p className="text-muted-foreground">Biłgoraj, Polska</p>
                   </div>
                 </div>
               </CardContent>
@@ -102,7 +105,7 @@ const Contact = () => {
               <h3 className="font-semibold mb-2 text-primary">Szybka odpowiedź gwarantowana</h3>
               <p className="text-sm text-muted-foreground">
                 Odpowiadamy na wszystkie zapytania w ciągu 24 godzin roboczych. 
-                W przypadku pilnych projektów dzwonimy tego samego dnia.
+                W przypadku pilnych projektów oddzwonimy tego samego dnia.
               </p>
             </div>
           </div>
@@ -166,7 +169,7 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="quantity">Planowana ilość breloków</Label>
+                    <Label htmlFor="quantity">Planowana ilość zamówienia</Label>
                     <Input
                       id="quantity"
                       name="quantity"
