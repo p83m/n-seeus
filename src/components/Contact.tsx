@@ -4,42 +4,25 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    quantity: "",
-    message: ""
-  });
+  const [state, handleSubmit] = useForm("xovpwlvd");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Wiadomość wysłana!",
-      description: "Skontaktujemy się z Tobą w ciągu 24 godzin.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      quantity: "",
-      message: ""
-    });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  if (state.succeeded) {
+    return (
+      <section className="py-20 px-4 relative" id="contact">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Dziękujemy za kontakt!
+          </h2>
+          <p className="text-xl text-muted-foreground">
+            Skontaktujemy się z Tobą w ciągu 24 godzin.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-20 px-4 relative" id="contact">
@@ -124,10 +107,13 @@ const Contact = () => {
                       <Input
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleChange}
                         required
                         className="bg-background/50 border-border/50"
+                      />
+                      <ValidationError 
+                        prefix="Imię i nazwisko" 
+                        field="name"
+                        errors={state.errors}
                       />
                     </div>
                     <div className="space-y-2">
@@ -135,9 +121,12 @@ const Contact = () => {
                       <Input
                         id="company"
                         name="company"
-                        value={formData.company}
-                        onChange={handleChange}
                         className="bg-background/50 border-border/50"
+                      />
+                      <ValidationError 
+                        prefix="Nazwa firmy" 
+                        field="company"
+                        errors={state.errors}
                       />
                     </div>
                   </div>
@@ -149,10 +138,13 @@ const Contact = () => {
                         id="email"
                         name="email"
                         type="email"
-                        value={formData.email}
-                        onChange={handleChange}
                         required
                         className="bg-background/50 border-border/50"
+                      />
+                      <ValidationError 
+                        prefix="Email" 
+                        field="email"
+                        errors={state.errors}
                       />
                     </div>
                     <div className="space-y-2">
@@ -161,9 +153,12 @@ const Contact = () => {
                         id="phone"
                         name="phone"
                         type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
                         className="bg-background/50 border-border/50"
+                      />
+                      <ValidationError 
+                        prefix="Telefon" 
+                        field="phone"
+                        errors={state.errors}
                       />
                     </div>
                   </div>
@@ -174,9 +169,12 @@ const Contact = () => {
                       id="quantity"
                       name="quantity"
                       placeholder="np. 300 sztuk"
-                      value={formData.quantity}
-                      onChange={handleChange}
                       className="bg-background/50 border-border/50"
+                    />
+                    <ValidationError 
+                      prefix="Ilość" 
+                      field="quantity"
+                      errors={state.errors}
                     />
                   </div>
 
@@ -187,16 +185,24 @@ const Contact = () => {
                       name="message"
                       rows={4}
                       placeholder="Opisz swój projekt, wymagania dotyczące designu, terminy..."
-                      value={formData.message}
-                      onChange={handleChange}
                       required
                       className="bg-background/50 border-border/50"
                     />
+                    <ValidationError 
+                      prefix="Wiadomość" 
+                      field="message"
+                      errors={state.errors}
+                    />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-blue">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-blue"
+                    disabled={state.submitting}
+                  >
                     <Send className="w-5 h-5 mr-2" />
-                    Wyślij zapytanie
+                    {state.submitting ? "Wysyłanie..." : "Wyślij zapytanie"}
                   </Button>
                 </form>
               </CardContent>
