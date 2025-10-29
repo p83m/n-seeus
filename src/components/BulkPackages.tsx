@@ -107,6 +107,9 @@ const BulkPackages = () => {
                       ? 'bg-primary hover:bg-primary/90 text-primary-foreground glow-blue' 
                       : 'bg-secondary hover:bg-secondary/90 text-secondary-foreground'
                   }`}
+                  onClick={() => {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   Zamów {pkg.units} szt.
                 </Button>
@@ -119,7 +122,9 @@ const BulkPackages = () => {
           <p className="text-muted-foreground mb-6">
             Potrzebujesz innej ilości lub masz pytania?
           </p>
-          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10" onClick={() => {
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+          }}>
             Skontaktuj się z nami
           </Button>
         </div>

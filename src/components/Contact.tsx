@@ -104,7 +104,7 @@ const Contact = () => {
             <div className="bg-primary/10 rounded-lg p-6 glow-blue">
               <h3 className="font-semibold mb-2 text-primary">Szybka odpowiedź gwarantowana</h3>
               <p className="text-sm text-muted-foreground">
-                Odpowiadamy na wszystkie zapytania w ciągu 24 godzin roboczych. 
+                Odpowiadamy na wszystkie zapytania w ciągu 24 godzin. 
                 W przypadku pilnych projektów oddzwonimy tego samego dnia.
               </p>
             </div>
