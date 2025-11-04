@@ -16,8 +16,8 @@ const Hero = () => {
         
         {/* Floating elements */}
         {/* left lightning */}
-        <div className="hidden sm:flex absolute top-16 left-12 w-24 h-24 rounded-full bg-primary/10 animate-float items-center justify-center" style={{ animationDelay: "1s" }}>
-          <Zap className="w-8 h-8 sm:w-12 sm:h-12" />
+        <div className="absolute top-16 left-12 w-24 h-24 rounded-full bg-primary/10 animate-float items-center justify-center opacity-20 sm:opacity-100 transition-opacity duration-500" style={{ animationDelay: "1s" }}>
+        <Zap className="w-8 h-8 sm:w-12 sm:h-12" />
         </div>
 
         {/* right lightning*/}
