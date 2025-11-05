@@ -17,15 +17,15 @@ const Hero = () => {
         {/* Floating elements */}
 
         {/* left lightning */}
-        <div className="absolute top-20 left-40 -translate-x-1/2 -translate-y-1/2 w-24 h-24 flex items-center justify-center rounded-full bg-primary/10 animate-float opacity-20 sm:opacity-100 transition-opacity duration-500"
+        {/* <div className="absolute top-20 left-40 -translate-x-1/2 -translate-y-1/2 w-24 h-24 flex items-center justify-center rounded-full bg-primary/10 animate-float opacity-20 sm:opacity-100 transition-opacity duration-500"
         style={{ animationDelay: "0s" }}>
         <Zap className="w-8 h-8 sm:w-12 sm:h-12 text-primary" />
-        </div>
+        </div> */}
 
         {/* right lightning*/}
-        <div className="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-secondary/10 animate-float flex items-center justify-center" style={{ animationDelay: "3s" }}>
+        {/* <div className="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-secondary/10 animate-float flex items-center justify-center" style={{ animationDelay: "3s" }}>
           <Zap className="w-8 h-8 sm:w-12 sm:h-12 text-primary" />
-        </div>
+        </div> */}
         
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
           {/* Main headline */}
@@ -65,16 +65,16 @@ const Hero = () => {
 
           {/* Floating NFC icon */}
           <div className="absolute top-[2%] left-[80%] transform -translate-y-1/2">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 flex items-center justify-center animate-float glow-blue">
+          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 flex items-center justify-center glow-blue">
           <Zap className="w-10 h-10 text-primary" />
             </div>
           </div>
           
-          <div className="absolute top-[110%] left-[10%] transform -translate-y-1/2">
+          {/* <div className="absolute top-[110%] left-[10%] transform -translate-y-1/2">
           <div className="w-16 h-16 rounded-full bg-gradient-to-r from-secondary/10 to-primary/20 flex items-center justify-center animate-float glow-violet" style={{ animationDelay: "2s" }}>
           <Nfc className="w-8 h-8 text-secondary" />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     );

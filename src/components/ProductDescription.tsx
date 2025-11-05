@@ -25,7 +25,7 @@ const ProductDescription = () => {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center glow-blue">
                 <Smartphone className="w-6 h-6 text-primary" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-2">Natychmiastowe połączenie</h3>
                 <p className="text-muted-foreground">
                   Bez pobierania aplikacji. Każdy telefon z NFC automatycznie rozpoznaje brelok.
@@ -37,7 +37,7 @@ const ProductDescription = () => {
               <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center glow-violet">
                 <Palette className="w-6 h-6 text-secondary" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-2">Pełna personalizacja</h3>
                 <p className="text-muted-foreground">
                   Wykonamy projekt pod dowolny kształt, logo, kolory firmowe. Brelok idealnie dopasowany do marki.
@@ -49,7 +49,7 @@ const ProductDescription = () => {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center glow-blue">
                 <Nfc className="w-6 h-6 text-primary" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-2">Uniwersalne łącze</h3>
                 <p className="text-muted-foreground">
                   Przekierowanie do spersonalizowanej wizytówki. Zawsze aktualnej - aktualizowanej zdalnie.
