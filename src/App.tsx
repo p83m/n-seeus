@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import NotFound from "./pages/NotFound";
+import { Analytics } from "@vercel/analytics/react"
 
 const queryClient = new QueryClient();
 
